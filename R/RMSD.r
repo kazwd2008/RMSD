@@ -10,9 +10,15 @@
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
 #' @param pt  threshold for outlier detection
+#' @importFrom stats mad
+#' @importFrom stats mahalanobis
+#' @importFrom stats runif
+#' @importFrom stats qchisq
+#' @importFrom stats median
+#' @importFrom stats qf
 #' @export
 
-Rmsd <- function(inp, nb=0, sd=0, pt=0.999) {
+RMSD <- function(inp, nb=0, sd=0, pt=0.999) {
 
 inp_d <- ncol(inp)            # number of variables
 inp_n <- nrow(inp)            # number of observations
@@ -112,7 +118,7 @@ cf <- qf(pt, inp_d, inp_n - inp_d) 	# 99.9 percentile point of F distribution
 ot <- rep(1, inp_n)			# outlier flag (1: OK;   2: outlier)
 ot[which(FF > cf)] <- 2 		# outliers are those exceed the threshold
 
-return(list(u=u2, V=V2, wt=wts2, mah=mah, fs=cf, ot=ot))
+return(list(u=u2, V=V2, wt=wts2, mah=mah, FF=FF, cf=cf, ot=ot))
 }
 
 ###########################################################
