@@ -33,11 +33,12 @@ This is an example with CYG OB1 Star Cluster Data in robustbase package.
 ``` r
 library(RMSD)
 data(starsCYG, package="robustbase")
-ot1 <- RMSD(startsCYG)
+ot1 <- RMSD(starsCYG)
 
-# 
+# scatterplot 
 plot(starsCYG, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
 
+# final weights
 plot(ot1$wt, col=ot1$ot, pch=19, main="Degree of Outlyingness")
 ```
 
