@@ -9,7 +9,17 @@
 #' @param inp imput data (a numeric matrix)
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
-#' @param pt  threshold for outlier detection
+#' @param pt  threshold for outlier detection (probability)
+#' @return a list of the following information
+#' \itemize{
+#'   \item u  final mean vector
+#'   \item V  final covariance matrix
+#'   \item wt final weights
+#'   \item mah Mahalanobis distances of each observation
+#'   \item FF F test statistics
+#'   \item cf threshold to detect outliers (percentile point)
+#'   \item ot 1:normal observation, 2:outlier
+#' }
 #' @importFrom stats mad
 #' @importFrom stats mahalanobis
 #' @importFrom stats runif

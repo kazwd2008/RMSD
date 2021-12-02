@@ -13,7 +13,19 @@ RMSD(inp, nb = 0, sd = 0, pt = 0.999)
 
 \item{sd}{seed (for reproducibility)}
 
-\item{pt}{threshold for outlier detection}
+\item{pt}{threshold for outlier detection (probability)}
+}
+\value{
+a list of the following information
+\itemize{
+  \item u  final mean vector
+  \item V  final covariance matrix
+  \item wt final weights
+  \item mah Mahalanobis distances of each observation
+  \item FF F test statistics
+  \item cf threshold to detect outliers (percentile point)
+  \item ot 1:normal observation, 2:outlier
+}
 }
 \description{
 This function is for multivariate outlier detection
