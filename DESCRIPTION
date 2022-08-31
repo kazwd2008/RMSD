@@ -1,7 +1,8 @@
 Package: RMSD
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Modified Stahel-Donoho Estimators for Outlier Detection
 Version: 0.1.0
+Suggests: doParallel 
 Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID="0000-0002-9578-1588"))
 Maintainer: WADA Kazumi <kazwd2008@gmail.com>
 Description: The package contains a function for multivariate outlier detection method based on Modified Stahel-Donoho(MSD) estimators. 
@@ -11,4 +12,4 @@ Description: The package contains a function for multivariate outlier detection 
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1

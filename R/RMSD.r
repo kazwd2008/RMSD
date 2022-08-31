@@ -1,7 +1,7 @@
 #----------------------------------------------------------
 #' Modified Stahel-Donoho Estimators (Single core version)
 #'
-#' This function is for multivariate outlier detection
+#' This function is for multivariate outlier detection.
 #'    Ver.1.6 2009/07/14   Published at http://www.stat.go.jp/training/2kenkyu/pdf/ihou/67/wada1.pdf (in Japanese)
 #'    Ver.1.7 2018/10/19   Modify gso function to stop warning messages
 #'    Ver.2   2021/09/10   Added the outlier detection step
@@ -10,6 +10,7 @@
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
 #' @param pt  threshold for outlier detection (probability)
+#'
 #' @return a list of the following information
 #' \itemize{
 #'   \item u  final mean vector
