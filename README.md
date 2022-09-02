@@ -4,18 +4,17 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of RMSD is to provide a tool for multivariate outlier detection based on the Modified Stahel-Donoho estimators.
+The RMSD package aims to provide a tool for multivariate outlier detection based on the Modified Stahel-Donoho estimators. The RMSD function is contained in the package.
 
-Since the function uses random numbers, the results between runs could differ unless a random seed is provided using the parameter "sd".
+Since the function RMSD uses random numbers, the results between runs could differ unless a random seed is provided using the parameter “sd.”
 
-The default setting of the threshold to decide outlier is 99.9 percentile point of F-statistics.  It can be changed using the parameter "pt".
+The default threshold set to decide outlier is 99.9 percentile point of F-statistics. It can be changed using the parameter “pt.”
 
-The algorithm is computationally burdensome when the number of variables increases.  We confirm that this function works up to 11 variables with 100 observations in a 32-bit PC with 4GB memory. 
+The algorithm is computationally burdensome when the number of variables increases. We confirm this function works up to 11 variables with 100 observations in a 32-bit PC with 4GB memory. 
 
-Paralleled function code is available from https://github.com/kazwd2008/MSD.parallel. 
+A parallel package with the same method is available from https://github.com/kazwd2008/MSDp for higher dimensional datasets. 
 
-This function is improved the function “msd” at https://github.com/kazwd2008/MSD by adding the last step to calculate Mahalanobis distance of each observation and F-statistics to decide outliers.
-
+RMSD improves “msd” at https://github.com/kazwd2008/MSD by adding the last step to calculate the squared Mahalanobis distance of each observation and F-statistics to decide outliers.
 
 ## Installation
 
@@ -62,7 +61,7 @@ pairs(aircraft, pch=19, col=ot2$ot)
 ot3 <- RMSD(aircraft, sd=2, pt=0.95)
 pairs(aircraft, pch=19, col=ot3$ot)
 
-# See if the results are the same
+# See if the results are the same with same random seed
 sum(abs(ot2$mah-ot3$mah))
 
 # Effect of different thresholds
