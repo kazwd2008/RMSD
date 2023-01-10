@@ -1,14 +1,13 @@
 Package: RMSD
 Type: Package
-Title: Modified Stahel-Donoho Estimators for Outlier Detection
+Title: Refined Modified Stahel-Donoho Estimators for Outlier Detection
 Version: 0.1.0
 Suggests: doParallel 
 Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID="0000-0002-9578-1588"))
 Maintainer: WADA Kazumi <kazwd2008@gmail.com>
-Description: The package contains a function for multivariate outlier detection method based on Modified Stahel-Donoho(MSD) estimators. 
-             The function, RMSD, is the one called the single core version described in Wada & Tsubaki (2013), and it is also used in Wada et al. (2020). 
-             -  Wada & Tsubaki (2013) <doi:10.1109/CLOUDCOM-ASIA.2013.86>.
-             -  Wada, Kawano & Tsubaki (2020) <doi:10.17713/ajs.v49i2.872>.
+Description: 
+     A function for multivariate outlier detection named Modified Stahel-Donoho (MSD) estimators is contained.  The function is for elliptically distributed datasets and recognizes outliers based on Mahalanobis distance. 
+    The function is called the single core version in Wada & Tsubaki (2013) <doi:10.1109/CLOUDCOM-ASIA.2013.86> and evaluated with other methods in Wada, Kawano & Tsubaki (2020) <doi:10.17713/ajs.v49i2.872>.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
