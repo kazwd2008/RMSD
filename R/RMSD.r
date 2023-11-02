@@ -6,7 +6,7 @@
 #'    Ver.1.7 2018/10/19   Modify gso function to stop warning messages
 #'    Ver.2   2021/09/10   Added the outlier detection step
 #'
-#' @param inp imput data (a numeric matrix)
+#' @param inp input data (a numeric matrix)
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
 #' @param pt  threshold for outlier detection (probability)
