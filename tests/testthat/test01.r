@@ -1,7 +1,17 @@
 
 # create test dataset following normal distribution with correlation
 
-source("http://aoki2.si.gunma-u.ac.jp/R/src/gendat2.R", encoding="euc-jp")  # for introducing correlation
+# source("http://aoki2.si.gunma-u.ac.jp/R/src/gendat2.R", encoding="euc-jp")  
+gendat2 <- function(	nc,  # sample size
+			r)   # correlation coefficient
+{
+	z <- matrix(rnorm(2*nc), ncol=2)
+	r2 <- cor(z)
+	res <- eigen(r2)
+	coeff <-  solve(r2) %*% t(sqrt(res$values)*t(res$vectors))
+	z <- scale(z) %*% coeff
+	return(z %*% chol(matrix(c(1, r, r, 1), ncol=2)))
+} # gendat2 is provided by Prof. Aoki of Gunma Univ.
 
 nc <- 100  # number of records
 z <- gendat2(nc, 0.8)
