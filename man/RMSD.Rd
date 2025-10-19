@@ -7,7 +7,7 @@
 RMSD(inp, nb = 0, sd = 0, pt = 0.999)
 }
 \arguments{
-\item{inp}{imput data (a numeric matrix)}
+\item{inp}{input data (a numeric matrix)}
 
 \item{nb}{number of basis}
 
